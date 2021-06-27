@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>815</width>
+    <width>878</width>
     <height>489</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="maximum">
-    <number>1000</number>
+    <number>10</number>
    </property>
    <property name="orientation">
     <enum>Qt::Vertical</enum>
@@ -45,7 +45,7 @@
     </rect>
    </property>
    <property name="maximum">
-    <number>900</number>
+    <number>20</number>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -92,7 +92,7 @@
     <string>Theorem = BC² = AB² + AC²</string>
    </property>
   </widget>
-  <widget class="QLabel" name="lblAB">
+  <widget class="QLabel" name="lblABvalue">
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -108,7 +108,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="lblAC">
+  <widget class="QLabel" name="lblACvalue">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -148,8 +148,8 @@
     <rect>
      <x>20</x>
      <y>30</y>
-     <width>191</width>
-     <height>261</height>
+     <width>171</width>
+     <height>231</height>
     </rect>
    </property>
    <property name="text">
@@ -161,6 +161,78 @@
    <property name="scaledContents">
     <bool>true</bool>
    </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>180</y>
+     <width>221</width>
+     <height>95</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QLabel" name="lblABsquared">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelAB">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>AB² = </string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="lblACsquared">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblAC">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>AC²</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>BC²</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="lblBCsquared">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources>
