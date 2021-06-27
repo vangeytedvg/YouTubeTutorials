@@ -76,30 +76,18 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>100</y>
-     <width>251</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Theorem = BC² = AB² + AC²</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="lblABvalue">
    <property name="geometry">
     <rect>
      <x>460</x>
      <y>420</y>
      <width>58</width>
-     <height>18</height>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;
+color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -111,11 +99,15 @@
   <widget class="QLabel" name="lblACvalue">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>177</x>
      <y>190</y>
-     <width>58</width>
-     <height>18</height>
+     <width>61</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;
+color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
     <string>0</string>
@@ -162,75 +154,118 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>180</y>
-     <width>221</width>
-     <height>95</height>
+     <x>530</x>
+     <y>10</y>
+     <width>321</width>
+     <height>201</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="1">
-     <widget class="QLabel" name="lblABsquared">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-    </item>
+   <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <widget class="QLabel" name="labelAB">
+     <widget class="QLabel" name="label">
       <property name="styleSheet">
        <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
       </property>
       <property name="text">
-       <string>AB² = </string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="lblACsquared">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>0</string>
+       <string>Theorem = BC² = AB² + AC²</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="lblAC">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>AC²</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>BC²</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="lblBCsquared">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="1">
+       <widget class="QLabel" name="lblACsquared">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="lblABsquared">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelAB">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>AB² = </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="lblBCsquared">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>BC² =</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblAC">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>AC² =</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(26, 255, 14);
+font: 75 14pt &quot;Noto Sans&quot;;
+border-color: rgb(255, 255, 127);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>HYPOTHENUSE </string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="lblHypothenuse">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(26, 255, 14);
+font: 75 14pt &quot;Noto Sans&quot;;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

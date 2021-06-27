@@ -1,9 +1,14 @@
 from PyQt5 import QtWidgets, QtGui, Qt
+from math import sqrt
 from frmPythagoras import Ui_frmMain
 
 
 class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
     def __init__(self):
+        # Encapsulated member variables
+        self._ab_squared = 0
+        self._ac_squared = 0
+        self._bc = 0
         """
         CTor
         """
@@ -17,8 +22,9 @@ class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
         """
         Handle A->C value
         """
-        self.lblACvalue.setText(f"{str(self.slideAC.value())} meter")
-        self.lblACsquared.setText(str(int(self.slideAC.value()) ** 2))
+        self.lblACvalue.setText(f"{str(self.slideAC.value())}")
+        self._ac_squared = int(self.slideAC.value()) ** 2
+        self.lblACsquared.setText(str(self._ac_squared))
         self.calculateHypothenuse(self.slideAB.value(), self.slideAC.value())
 
     def handle_slideAB_changed(self):
@@ -26,13 +32,19 @@ class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
         Handle A->B value
         :return:
         """
-        self.lblABvalue.setText(f"{str(self.slideAB.value())} meter")
-        self.lblABsquared.setText(str(int(self.slideAB.value()) ** 2))
+        self.lblABvalue.setText(f"{str(self.slideAB.value())}")
+        self._ab_squared = int(self.slideAB.value()) ** 2
+        self.lblABsquared.setText(str(self._ab_squared))
         self.calculateHypothenuse(self.slideAB.value(), self.slideAC.value())
 
     def calculateHypothenuse(self, ab: int, ac:int):
-        hypothenuse = (ab**2) + (ac**2)
-        self.lblBCsquared.setText(str(hypothenuse))
+        abac = self._ab_squared + self._ac_squared
+        self._bc = abac
+        self.lblBCsquared.setText(str(abac))
+        hypotenuse = sqrt(self._bc)
+        fmt = "{:,.2f}".format(hypotenuse)
+        self.lblHypothenuse.setText(str(fmt))
+        pass
 
 
 if __name__ == '__main__':
