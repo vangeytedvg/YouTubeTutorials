@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="drawings">
+    <file>pythagoras.png</file>
+    <file>piet.png</file>
+  </qresource>
+  <qresource prefix="icons"/>
+</RCC>
