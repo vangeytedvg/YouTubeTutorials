@@ -527,6 +527,9 @@
   ('images_rc',
    '/home/danny/PycharmProjects/YouTubeTutorials/images_rc.py',
    'PYMODULE'),
+  ('RotatedQLabel',
+   '/home/danny/PycharmProjects/YouTubeTutorials/RotatedQLabel.py',
+   'PYMODULE'),
   ('PyQt5',
    '/home/danny/anaconda3/lib/python3.8/site-packages/PyQt5/__init__.py',
    'PYMODULE')])

@@ -1,19 +1,24 @@
 from PyQt5 import QtWidgets, QtGui, Qt
 from math import sqrt
+import RotatedQLabel
 from frmPythagoras import Ui_frmMain
 
 
 class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
     def __init__(self):
-        # Encapsulated member variables
-        self._ab_squared = 0
-        self._ac_squared = 0
-        self._bc = 0
         """
         CTor
         """
         super(Pythagoras, self).__init__()
         self.setupUi(self)
+        # Encapsulated member variables
+        self._ab_squared = 0
+        self._ac_squared = 0
+        self._bc = 0
+        self.lblRotate.angle = -90
+        self.lblRotate.label_text = "KWAKKEDIE"
+
+
         """ Event handlers """
         self.slideAC.valueChanged.connect(self.handle_slideAC_changed)
         self.slideAB.valueChanged.connect(self.handle_slideAB_changed)
