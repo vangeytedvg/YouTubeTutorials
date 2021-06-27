@@ -6,89 +6,127 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>460</width>
-    <height>399</height>
+    <width>645</width>
+    <height>455</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Pythagoras Theorem</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QSlider" name="slideAC">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>350</y>
-     <width>341</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
-  <widget class="QSlider" name="verticalSlider">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>30</y>
+     <x>70</x>
+     <y>50</y>
      <width>21</width>
      <height>291</height>
     </rect>
    </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
    <property name="orientation">
     <enum>Qt::Vertical</enum>
    </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksAbove</enum>
+   </property>
+   <property name="tickInterval">
+    <number>50</number>
+   </property>
   </widget>
-  <widget class="QSlider" name="horizontalSlider">
+  <widget class="QSlider" name="slideAB">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>320</y>
-     <width>201</width>
+     <x>140</x>
+     <y>380</y>
+     <width>361</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="maximum">
+    <number>900</number>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBelow</enum>
+   </property>
+   <property name="tickInterval">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblImageTriangle">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>0</y>
+     <width>431</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/drawings/pythagoras.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>80</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Theorem = BC² = AB² + AC²</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblAB">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>400</y>
+     <width>58</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblAC">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>58</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
- <resources/>
- <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>frmMain</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>frmMain</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
 </ui>

@@ -1,16 +1,26 @@
-# This is a sample Python script.
-
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from PyQt5 import QtWidgets, QtGui, Qt
+from frmPythagoras import Ui_frmMain
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
+    def __init__(self):
+        super(Pythagoras, self).__init__()
+        self.setupUi(self)
+        self.slideAC.valueChanged.connect(self.handle_slideAC_changed)
+        self.slideAB.valueChanged.connect(self.handle_slideAB_changed)
+
+    def handle_slideAC_changed(self):
+        self.lblAC.setText(str(self.slideAC.value()))
+
+    def handle_slideAB_changed(self):
+        self.lblAB.setText(str(self.slideAB.value()))
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    import sys
+    import os
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app = QtWidgets.QApplication(sys.argv)
+    main_form = Pythagoras()
+    main_form.show()
+    sys.exit(app.exec_())
