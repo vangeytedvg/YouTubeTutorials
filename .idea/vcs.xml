@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/YouTube Tutorial" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/YouTube Tutorial/YouTube Projecten" vcs="Git" />
   </component>
 </project>

@@ -19,16 +19,7 @@ class Pythagoras(QtWidgets.QDialog, Ui_frmMain):
         self._ab_squared = 0
         self._ac_squared = 0
         self._bc = 0
-        # Custom labels
-        self.lblACvalue.angle = -90
-        self.lblACvalue.setText("0")
-        self.lblACvalue.setAlignment(Qt.AlignCenter)
         self.lblACvalue.setStyleSheet('font: 75 14pt "Noto Sans";color: rgb(255, 255, 0);')
-
-        self.lblHypothenusediagonal.angle = 90
-        self.lblHypothenusediagonal.setText("0")
-        self.lblHypothenusediagonal.setAlignment(Qt.AlignCenter)
-        self.lblHypothenusediagonal.setStyleSheet('font: 75 14pt "Noto Sans";color: rgb(255, 255, 0);')
 
         """ Event handlers """
         self.slideAC.valueChanged.connect(self.handle_slideAC_changed)
@@ -60,7 +51,7 @@ class Pythagoras(QtWidgets.QDialog, Ui_frmMain):
         hypotenuse = sqrt(self._bc)
         fmt = "{:,.2f}".format(hypotenuse)
         self.lblHypothenuse.setText(str(fmt))
-        self.lblHypothenusediagonal.setText(str(fmt))
+
 
 
 if __name__ == '__main__':
