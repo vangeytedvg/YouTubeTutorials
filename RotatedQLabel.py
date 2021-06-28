@@ -6,6 +6,7 @@ from PyQt5.QtCore import Qt, QSize
 class RotatedQLabel(QLabel):
     """
     Rotated Label subclasses QLabel.  This label correctly centers
+    in the widget body
     """
 
     def __init__(self, *args):
