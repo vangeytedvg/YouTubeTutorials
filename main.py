@@ -1,23 +1,34 @@
-from PyQt5 import QtWidgets, QtGui, Qt
+from PyQt5 import QtWidgets
+from PyQt5.QtCore import Qt
 from math import sqrt
-import RotatedQLabel
 from frmPythagoras import Ui_frmMain
 
 
-class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
+class Pythagoras(QtWidgets.QDialog, Ui_frmMain):
     def __init__(self):
         """
         CTor
         """
         super(Pythagoras, self).__init__()
         self.setupUi(self)
+        # Disable the maximize button
+        self.setWindowFlags(self.windowFlags() | Qt.CustomizeWindowHint)
+        self.setWindowFlags(Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint)
+        self.setFixedSize(self.width(), self.height())
         # Encapsulated member variables
         self._ab_squared = 0
         self._ac_squared = 0
         self._bc = 0
-        self.lblRotate.angle = -90
-        self.lblRotate.label_text = "KWAKKEDIE"
+        # Custom labels
+        self.lblACvalue.angle = -90
+        self.lblACvalue.setText("0")
+        self.lblACvalue.setAlignment(Qt.AlignCenter)
+        self.lblACvalue.setStyleSheet('font: 75 14pt "Noto Sans";color: rgb(255, 255, 0);')
 
+        self.lblHypothenusediagonal.angle = 90
+        self.lblHypothenusediagonal.setText("0")
+        self.lblHypothenusediagonal.setAlignment(Qt.AlignCenter)
+        self.lblHypothenusediagonal.setStyleSheet('font: 75 14pt "Noto Sans";color: rgb(255, 255, 0);')
 
         """ Event handlers """
         self.slideAC.valueChanged.connect(self.handle_slideAC_changed)
@@ -49,7 +60,7 @@ class Pythagoras(QtWidgets.QMainWindow, Ui_frmMain):
         hypotenuse = sqrt(self._bc)
         fmt = "{:,.2f}".format(hypotenuse)
         self.lblHypothenuse.setText(str(fmt))
-        pass
+        self.lblHypothenusediagonal.setText(str(fmt))
 
 
 if __name__ == '__main__':

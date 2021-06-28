@@ -6,102 +6,182 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>904</width>
-    <height>449</height>
+    <width>685</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Pythagoras Theorem</string>
   </property>
-  <widget class="QLabel" name="lblPythagoras">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>201</width>
-     <height>250</height>
+     <x>20</x>
+     <y>20</y>
+     <width>261</width>
+     <height>419</height>
     </rect>
    </property>
-   <property name="maximumSize">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Theorem = BC² = AB² + AC²</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblAC">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>AC² =</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="lblABsquared">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="lblACsquared">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>BC² =</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(26, 255, 14);
+font: 75 14pt &quot;Noto Sans&quot;;
+border-color: rgb(255, 255, 127);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>HYPOTHENUSE </string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="lblBCsquared">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLabel" name="lblHypothenuse">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(26, 255, 14);
+font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="labelAB">
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>AB² = </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblPythagoras">
+      <property name="maximumSize">
+       <size>
+        <width>230</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="images.qrc">:/drawings/piet.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="RotatedQLabel" name="lblHypothenusediagonal" native="true">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>90</y>
+     <width>131</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
     <size>
-     <width>230</width>
-     <height>250</height>
+     <width>40</width>
+     <height>0</height>
     </size>
    </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="images.qrc">:/drawings/piet.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>10</y>
-     <width>411</width>
-     <height>411</height>
+     <x>291</x>
+     <y>21</y>
+     <width>378</width>
+     <height>365</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <widget class="QLabel" name="lblACvalue">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;
-color: rgb(255, 255, 0);</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2" colspan="2">
-     <widget class="QLabel" name="lblABvalue">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;
-color: rgb(255, 255, 0);</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
+     <widget class="RotatedQLabel" name="lblACvalue" native="true">
+      <property name="minimumSize">
        <size>
-        <width>20</width>
-        <height>40</height>
+        <width>40</width>
+        <height>0</height>
        </size>
       </property>
-     </spacer>
-    </item>
-    <item row="3" column="2" rowspan="2" colspan="2">
-     <widget class="QSlider" name="slideAB">
-      <property name="maximum">
-       <number>20</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::TicksBelow</enum>
-      </property>
-      <property name="tickInterval">
-       <number>50</number>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
      </widget>
     </item>
@@ -121,20 +201,7 @@ color: rgb(255, 255, 0);</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="4">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="2" colspan="2">
+    <item row="0" column="2">
      <widget class="QLabel" name="lblImageTriangle">
       <property name="maximumSize">
        <size>
@@ -153,128 +220,37 @@ color: rgb(255, 255, 0);</string>
       </property>
      </widget>
     </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>650</x>
-     <y>10</y>
-     <width>238</width>
-     <height>163</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="2">
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+    <item row="1" column="2">
+     <widget class="QSlider" name="slideAB">
+      <property name="maximum">
+       <number>20</number>
       </property>
-      <property name="text">
-       <string>Theorem = BC² = AB² + AC²</string>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBelow</enum>
+      </property>
+      <property name="tickInterval">
+       <number>50</number>
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="labelAB">
+    <item row="2" column="2">
+     <widget class="QLabel" name="lblABvalue">
       <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>AB² = </string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="lblABsquared">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
+       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;
+color: rgb(255, 255, 0);</string>
       </property>
       <property name="text">
        <string>0</string>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="lblAC">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>AC² =</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="lblACsquared">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>BC² =</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QLabel" name="lblBCsquared">
-      <property name="styleSheet">
-       <string notr="true">font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(26, 255, 14);
-font: 75 14pt &quot;Noto Sans&quot;;
-border-color: rgb(255, 255, 127);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string>HYPOTHENUSE </string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLabel" name="lblHypothenuse">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(26, 255, 14);
-font: 75 14pt &quot;Noto Sans&quot;;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string>0</string>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="RotatedQLabel" name="lblRotate" native="true">
-   <property name="geometry">
-    <rect>
-     <x>720</x>
-     <y>200</y>
-     <width>71</width>
-     <height>231</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <customwidgets>

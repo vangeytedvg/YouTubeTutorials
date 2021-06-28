@@ -1,26 +1,21 @@
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QLabel
 from PyQt5.QtGui import QPainter
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSize
 
 
-class RotatedQLabel(QWidget):
-    def __init__(self, parent):
+class RotatedQLabel(QLabel):
+    """
+    Rotated Label subclasses QLabel
+    """
+
+    def __init__(self, *args):
         """
-        CTor of RotatedQLabel
-        :param text: Text to display
-        :param angle: Angle of rotation
+        Ctor
+        :param args:
         """
-        super().__init__(parent)
-        self.__label_text = ""
-        self.__angle = ""
-
-    @property
-    def label_text(self):
-        return self.__label_text
-
-    @label_text.setter
-    def label_text(self, value):
-        self.__label_text = value
+        QLabel.__init__(self, *args)
+        # Set a default angle
+        self.__angle = -90
 
     @property
     def angle(self):
@@ -28,14 +23,24 @@ class RotatedQLabel(QWidget):
 
     @angle.setter
     def angle(self, value):
-        if value == 0 or value > 360:
-            raise ValueError("Angle should be between 0 and 360!")
         self.__angle = value
 
     def paintEvent(self, event):
+        """
+        Draw the label
+        :param event:
+        """
+        QLabel.paintEvent(self, event)
         painter = QPainter(self)
-        painter.setPen(Qt.black)
-        painter.translate(20, 100)
+        painter.translate(0, self.height()-1)
         painter.rotate(self.__angle)
-        painter.drawText(0, 0, self.__label_text)
-        painter.end()
+        self.setGeometry(self.x(), self.y(), self.height(), self.width())
+        QLabel.render(self, painter)
+
+    def minimumSizeHint(self):
+        size = QLabel.minimumSizeHint(self)
+        return QSize(size.height(), size.width())
+
+    def sizeHint(self):
+        size = QLabel.sizeHint(self)
+        return QSize(size.height(), size.width())
